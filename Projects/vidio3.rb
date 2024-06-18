@@ -1,9 +1,11 @@
 random_num = rand(1..10) # = rand(1...11)
 puts 'Я загадал число от 1 до 10'
 puts 'Попробуй отгадай'
+
 while
   user_dream_number = gets.chomp.to_i
-  if  user_dream_number == random_num
+
+  if user_dream_number == random_num
     puts 'Отлично! Вы угадали'
     return # или break
   elsif user_dream_number > random_num

@@ -1,13 +1,12 @@
 class Float
   def to_miles
-    convertation_move = self./1.609344
+    self./1.609344
   end
 end
 
 class Integer
   def to_miles
-    convertation_move = self./1.609344
-    convertation_move.to_i
+    (self./1.609344).to_i
   end
 end
 
