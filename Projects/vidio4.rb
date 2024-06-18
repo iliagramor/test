@@ -1,14 +1,29 @@
-random_num = rand(1..11)
-puts 'Я загадал число от 1 до 10'
-puts 'Попробуй отгадай'
-while
-  user_dream_number = gets.chomp.to_i
-  if  user_dream_number == random_num
-    puts 'Отлично! Вы угадали'
-    return # или break
-  elsif user_dream_number > random_num
-    puts 'Нет, загаданное число меньше'
-  else user_dream_number < random_num
-    puts 'Нет, загаданное число больше'
+countries = [
+    'RF', # 0
+    'China', # 1
+    'Franch',
+    'UK',
+    'Horwegia',
+    'Camboja'
+]
+capitals = [
+    'Moscow', # 0
+    'Pekin', # 1
+    'Paris',
+    'London',
+    'Oslo',
+    'Pelmen'
+]
+data = (countries.zip capitals).to_h
+# puts data.inspect
+data.each do |country, capital|
+  puts "Страна #{country}"
+  user_input = gets.strip.downcase # => Осло ---- осло
+  if user_input == capital.downcase
+    # если пользователь ввёл правильный ответ
+    puts "Молодец!"
+  else
+    puts "Ошибка"
+    puts "Правильный ответ #{capital}"
   end
 end

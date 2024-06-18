@@ -1,4 +1,4 @@
-random_num = rand(1..11)
+random_num = rand(1..10) # = rand(1...11)
 puts 'Я загадал число от 1 до 10'
 puts 'Попробуй отгадай'
 while
